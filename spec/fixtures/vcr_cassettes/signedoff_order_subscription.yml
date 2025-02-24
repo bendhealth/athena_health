@@ -1,0 +1,155 @@
+---
+http_interactions:
+  - request:
+      method: get
+      uri: https://api.preview.platform.athenahealth.com/v1/1959633/orders/signedoff/subscription
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Authorization:
+          - Bearer test_access_token
+        Expect:
+          - ""
+    response:
+      status:
+        code: 401
+        message: Unauthorized
+      headers:
+        Date:
+          - Mon, 24 Feb 2025 20:31:39 GMT
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "202"
+        Connection:
+          - keep-alive
+        WWW-Authenticate:
+          - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
+            Invalid Access Token"'
+        X-Request-Id:
+          - rrt-61058933234625725-d-gea1-1983026-78967744-1
+      body:
+        encoding: ASCII-8BIT
+        string: |
+          {
+              "error": "Invalid Access Token.",
+              "detailedmessage": "The access token provided is not valid. Please verify the token is correct and provided as a bearer token in the authorization header."
+          }
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/orders/signedoff/subscription
+    recorded_at: Mon, 24 Feb 2025 20:31:39 GMT
+  - request:
+      method: post
+      uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+      body:
+        encoding: US-ASCII
+        string: grant_type=client_credentials&scope=athena/service/Athenanet.MDP.*
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Expect:
+          - ""
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Mon, 24 Feb 2025 20:31:40 GMT
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "951"
+        Connection:
+          - keep-alive
+        Host:
+          - api.preview.platform.athenahealth.com
+        X-Forwarded-For:
+          - 177.55.245.206
+        X-Forwarded-Port:
+          - "443"
+        X-Forwarded-Proto:
+          - https
+        Authorization:
+          - Bearer test_access_token
+        Accept:
+          - "*/*"
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        X-Forwarded-Host:
+          - api.preview.platform.athenahealth.com
+        Cache-Control:
+          - no-store
+        Pragma:
+          - no-cache
+        X-RateLimit-Limit:
+          - "5"
+        X-RateLimit-Remaining:
+          - "4"
+      body:
+        encoding: ASCII-8BIT
+        string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULnBXWEIwaktqZUtCV25qMElXTDU3d19kSlZraWZSdHhPOHV0eU9oSWpHdjAiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDI5MTAwLCJleHAiOjE3NDA0MzI3MDAsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.iaOIjK_eRmke539aAZF2OhfWxPdTMXSJ_F46X1-e9OZ5rF-H4PaAdAR8D3Krp4ht-D0l25QPrpcA6vh57aKy2hKS0w2cu2Rz6wCEULrTYXCW-DNp7JBItGItIlaiJfDvU5Z394EJGUcIYRnnOJkknbE1A0VQhWm1MVUyCG9VKnsH6wfNDFDXm0SbRWS_08NFSSpQXoGvf0bXxqaaQruPTOhaeAyI_UkkUXA3UXj2-eJzyBkZM2YdFKMJsqZXKHl1WEeV5tjljSLkLIYeAk8ZaOz0axF0w5hGcUA5wfRMLTFBvm3jCaotEGGsqMKEm0TqJrFGbPZIjQrlvwVyPCcwjw","scope":"athena/service/Athenanet.MDP.*"}'
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+    recorded_at: Mon, 24 Feb 2025 20:31:40 GMT
+  - request:
+      method: get
+      uri: https://api.preview.platform.athenahealth.com/v1/1959633/orders/signedoff/subscription
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Authorization:
+          - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULnBXWEIwaktqZUtCV25qMElXTDU3d19kSlZraWZSdHhPOHV0eU9oSWpHdjAiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDI5MTAwLCJleHAiOjE3NDA0MzI3MDAsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.iaOIjK_eRmke539aAZF2OhfWxPdTMXSJ_F46X1-e9OZ5rF-H4PaAdAR8D3Krp4ht-D0l25QPrpcA6vh57aKy2hKS0w2cu2Rz6wCEULrTYXCW-DNp7JBItGItIlaiJfDvU5Z394EJGUcIYRnnOJkknbE1A0VQhWm1MVUyCG9VKnsH6wfNDFDXm0SbRWS_08NFSSpQXoGvf0bXxqaaQruPTOhaeAyI_UkkUXA3UXj2-eJzyBkZM2YdFKMJsqZXKHl1WEeV5tjljSLkLIYeAk8ZaOz0axF0w5hGcUA5wfRMLTFBvm3jCaotEGGsqMKEm0TqJrFGbPZIjQrlvwVyPCcwjw
+        Expect:
+          - ""
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Mon, 24 Feb 2025 20:31:40 GMT
+        Content-Type:
+          - application/json; charset=UTF-8
+        Content-Length:
+          - "91"
+        Connection:
+          - keep-alive
+        Server:
+          - Apache
+        Pragma:
+          - No-cache
+        Strict-Transport-Security:
+          - max-age=300
+        Expires:
+          - Sun, 06 Jan 2075 16:00:00 GMT
+        Cache-Control:
+          - no-cache, no-store
+        Vary:
+          - Accept-Encoding
+        Accept-CH:
+          - Sec-CH-UA-Platform-Version
+        nnCoection:
+          - close
+        X-RateLimit-Limit:
+          - "50000"
+        X-RateLimit-Remaining:
+          - "49980"
+        X-Request-Id:
+          - rrt-61058933234625725-d-gea1-1983026-78967744-3
+      body:
+        encoding: ASCII-8BIT
+        string: '{"status":"ACTIVE","subscriptions":[{"eventname":"OrderSignOffNotify"}],"departmentids":[]}'
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/orders/signedoff/subscription
+    recorded_at: Mon, 24 Feb 2025 20:31:40 GMT
+recorded_with: VCR 3.0.3

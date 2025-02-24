@@ -62,6 +62,15 @@ module AthenaHealth
         )
       end
 
+      def encounter_diagnoses(practice_id:, encounter_id:, params: {})
+        response = @api.call(
+          endpoint: "#{practice_id}/chart/encounter/#{encounter_id}/diagnoses",
+          method: :get,
+          params:
+        )
+        ::AthenaHealth::DiagnosesCollection.new({ diagnoses: response })
+      end
+
       def encounter_screening_questionnaires(practice_id:, encounter_id:, limit: nil, offset: nil)
         params = {
           limit: limit, offset: offset
