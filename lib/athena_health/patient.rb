@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module AthenaHealth
-  class Patient < BaseModel
+  class Patient < BaseModel # rubocop:disable Metrics/ClassLength, cspell: disable
     attribute :email,                                String
     attribute :emailexists,                          Boolean
     attribute :occupationcode,                       String
@@ -52,7 +54,7 @@ module AthenaHealth
     attribute :guarantorzip,                         String
     attribute :privacyinformationverified,           Boolean
     attribute :primarydepartmentid,                  Integer
-    attribute :balances,                             Array[Balance]
+    attribute :balances,                             [Balance]
     attribute :race,                                 Array
     attribute :racename,                             String
     attribute :language6392code,                     String
@@ -69,6 +71,7 @@ module AthenaHealth
     attribute :maritalstatus,                        String
     attribute :maritalstatusname,                    String
     attribute :sex,                                  String
+    attribute :genderidentity,                       String
     attribute :hasmobile,                            Boolean
     attribute :mobilephone,                          String
     attribute :onlinestatementonly,                  Boolean
