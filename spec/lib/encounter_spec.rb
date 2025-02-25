@@ -14,7 +14,11 @@ describe AthenaHealth::Encounter do
       'patientlocation': 'Patient Rm. 1',
       'encounterid': '32705',
       'lastupdated': '02\/01\/2016',
-      'patientstatus': 'Ready For Staff'
+      'patientstatus': 'Ready For Staff',
+      'providerfirstname': 'Leandro',
+      'providerid': '42',
+      'providerlastname': 'Costa',
+      'providerphone': '(800) 555-1234',
     }
   end
 
@@ -35,7 +39,11 @@ describe AthenaHealth::Encounter do
       patientlocation: 'Patient Rm. 1',
       encounterid: 32705,
       lastupdated: '02\/01\/2016',
-      patientstatus: 'Ready For Staff'
+      patientstatus: 'Ready For Staff',
+      providerfirstname: 'Leandro',
+      providerid: 42,
+      providerlastname: 'Costa',
+      providerphone: '(800) 555-1234',
     )
   end
 end
