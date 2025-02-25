@@ -7,7 +7,7 @@ RSpec.describe AthenaHealth::Endpoints::SignedoffOrders, type: :service do
   describe '#signedoff_order_subscription' do
     it 'retrieves signed-off order subscription', :vcr do
       VCR.use_cassette('signedoff_order_subscription') do
-        response = client.signedoff_order_subscription(practice_id:)
+        response = client.signedoff_order_subscription(practice_id: practice_id)
         expect(response).to be_a(AthenaHealth::Subscription)
       end
     end
@@ -16,7 +16,7 @@ RSpec.describe AthenaHealth::Endpoints::SignedoffOrders, type: :service do
   describe '#create_signedoff_order_subscription' do
     it 'creates a signed-off order subscription', :vcr do
       VCR.use_cassette('create_signedoff_order_subscription') do
-        response = client.create_signedoff_order_subscription(practice_id:)
+        response = client.create_signedoff_order_subscription(practice_id: practice_id)
         expect(response).to match({ 'success' => true })
       end
     end
@@ -25,7 +25,7 @@ RSpec.describe AthenaHealth::Endpoints::SignedoffOrders, type: :service do
   describe '#signedoff_orders' do
     it 'retrieves signed-off orders', :vcr do
       VCR.use_cassette('signedoff_orders') do
-        response = client.signedoff_orders(practice_id:)
+        response = client.signedoff_orders(practice_id: practice_id)
         expect(response).to be_a(AthenaHealth::SignedoffOrderCollection)
       end
     end

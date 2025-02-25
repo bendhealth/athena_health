@@ -7,7 +7,7 @@ module AthenaHealth
         response = @api.call(
           endpoint: "#{practice_id}/orders/signedoff/subscription",
           method: :get,
-          params:
+          params: params
         )
 
         Subscription.new(response)
@@ -17,7 +17,7 @@ module AthenaHealth
         @api.call(
           endpoint: "#{practice_id}/orders/signedoff/subscription",
           method: :post,
-          params:
+          params: params
         )
       end
 
@@ -25,7 +25,7 @@ module AthenaHealth
         response = @api.call(
           endpoint: "#{practice_id}/orders/signedoff",
           method: :get,
-          params:
+          params: params
         )
 
         AthenaHealth::SignedoffOrderCollection.new(response)
