@@ -9,7 +9,7 @@ module AthenaHealth
         response = @api.call(
           endpoint: "#{practice_id}/documenttypes",
           method: :get,
-          params:
+          params: params
         )
 
         DocumentTypeCollection.new(response)
