@@ -12,5 +12,9 @@ module AthenaHealth
     attribute :encounterid,        Integer
     attribute :lastupdated,        String
     attribute :patientstatus,      String
+    attribute :providerfirstname,	 String	#First name of the provider for this encounter
+    attribute :providerid,	       Integer	#The ID of the provider for this encounter
+    attribute :providerlastname,	 String	#Last name of the provider for this encounter
+    attribute :providerphone,	     String	#Phone number of the provider for this encounter
   end
 end
