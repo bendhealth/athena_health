@@ -66,7 +66,7 @@ module AthenaHealth
         response = @api.call(
           endpoint: "#{practice_id}/chart/encounter/#{encounter_id}/diagnoses",
           method: :get,
-          params:
+          params: params
         )
         ::AthenaHealth::DiagnosesCollection.new({ diagnoses: response })
       end
