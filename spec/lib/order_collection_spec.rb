@@ -14,6 +14,13 @@ describe AthenaHealth::OrderCollection do
         'ordertype': 'DME',
         'documents': []
       }],
+      "diagnosisicd": [
+        {
+          "description": "Attention-deficit hyperactivity disorder,        unspecified type",
+          "code": "F90.9",
+          "codeset": "ICD10"
+        }
+      ],
       'diagnosis': 'Carpal tunnel syndrome',
       'diagnosissnomed': '57406009'
     }
