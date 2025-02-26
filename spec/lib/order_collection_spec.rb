@@ -30,6 +30,7 @@ describe AthenaHealth::OrderCollection do
 
   it 'have proper attributes' do
     expect(subject.orders.map(&:class)).to eq [AthenaHealth::Order]
+    expect(subject.diagnosisicd.map(&:class)).to eq [AthenaHealth::DiagnosisCd]
     expect(subject).to have_attributes(
       diagnosis: 'Carpal tunnel syndrome',
       diagnosissnomed: '57406009'
