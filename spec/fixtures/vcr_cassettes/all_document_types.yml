@@ -1,203 +1,201 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      Authorization:
-      - Bearer test_access_token
-      Expect:
-      - ''
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Date:
-      - Tue, 25 Feb 2025 14:30:17 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '202'
-      Connection:
-      - keep-alive
-      WWW-Authenticate:
-      - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
-        Invalid Access Token"'
-      X-Request-Id:
-      - rrt-2235720502923495187-b-gea1-236359-133207689-1
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-            "error": "Invalid Access Token.",
-            "detailedmessage": "The access token provided is not valid. Please verify the token is correct and provided as a bearer token in the authorization header."
-        }
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
-  recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
-- request:
-    method: post
-    uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
-    body:
-      encoding: US-ASCII
-      string: grant_type=client_credentials&scope=athena/service/Athenanet.MDP.*
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      Expect:
-      - ''
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 25 Feb 2025 14:30:17 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '951'
-      Connection:
-      - keep-alive
-      Host:
-      - api.preview.platform.athenahealth.com
-      X-Forwarded-For:
-      - 177.55.245.206
-      X-Forwarded-Port:
-      - '443'
-      X-Forwarded-Proto:
-      - https
-      Authorization:
-      - Basic MG9hdnJyNjQ2ZUVlUVVPYnMyOTc6cmgwOV9RbzdVMUptUjZiM0dncV9WX0hGNU5OT0QxRHhfaDdOVjRxTXMybmtXX2tmeGxYdkZQLWlnRG9GUVY2dA==
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      X-Forwarded-Host:
-      - api.preview.platform.athenahealth.com
-      Cache-Control:
-      - no-store
-      Pragma:
-      - no-cache
-      X-RateLimit-Limit:
-      - '5'
-      X-RateLimit-Remaining:
-      - '4'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjNvMk9qbjQ3MUNhUjNCT1JlSUZBRFpVb244NHhwYmphVjNnSTdLMkx5eTgiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDkzODE3LCJleHAiOjE3NDA0OTc0MTcsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.afX6B2e4LUY3m9isrqtjXugt704UHVWC4Eem0EmQgHBV6-JRbUIHc0daDHj8qTjGhtM7cP4E3AYyhGP3Sw1wO93xgkVym0ZGIeGbVxJ7muv2T46ux_NwgRYOJPvwLQ3_P3XPVbdpGOixZI6VjCmyV-F7Y-8ZBDEF3NzHt0mOU7D86bs_YnvIULU4m8KItSrdTfnghHPdOh1BignNCsN5hCC9haXgf1pufi8_zGabRLK8S-9JAdhoNRCAAZc9NMqMrGknUNvisBfkPKejiNkUlVdXw2Mc9bRYB9Ht5Xd7GLKnzvGQk-yeMrXqyTie-8KAXQbE3E_R3I1cVepzqGKOZQ","scope":"athena/service/Athenanet.MDP.*"}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
-  recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
-- request:
-    method: get
-    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      Authorization:
-      - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjNvMk9qbjQ3MUNhUjNCT1JlSUZBRFpVb244NHhwYmphVjNnSTdLMkx5eTgiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDkzODE3LCJleHAiOjE3NDA0OTc0MTcsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.afX6B2e4LUY3m9isrqtjXugt704UHVWC4Eem0EmQgHBV6-JRbUIHc0daDHj8qTjGhtM7cP4E3AYyhGP3Sw1wO93xgkVym0ZGIeGbVxJ7muv2T46ux_NwgRYOJPvwLQ3_P3XPVbdpGOixZI6VjCmyV-F7Y-8ZBDEF3NzHt0mOU7D86bs_YnvIULU4m8KItSrdTfnghHPdOh1BignNCsN5hCC9haXgf1pufi8_zGabRLK8S-9JAdhoNRCAAZc9NMqMrGknUNvisBfkPKejiNkUlVdXw2Mc9bRYB9Ht5Xd7GLKnzvGQk-yeMrXqyTie-8KAXQbE3E_R3I1cVepzqGKOZQ
-      Expect:
-      - ''
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 25 Feb 2025 14:30:17 GMT
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '4413'
-      Connection:
-      - keep-alive
-      Server:
-      - Apache
-      Pragma:
-      - No-cache
-      Strict-Transport-Security:
-      - max-age=300
-      Expires:
-      - Sun, 06 Jan 2075 16:00:00 GMT
-      Cache-Control:
-      - no-cache, no-store
-      Vary:
-      - Accept-Encoding
-      Accept-CH:
-      - Sec-CH-UA-Platform-Version
-      nnCoection:
-      - close
-      X-RateLimit-Limit:
-      - '50000'
-      X-RateLimit-Remaining:
-      - '49813'
-      X-Request-Id:
-      - rrt-2235720502923495187-b-gea1-236359-133207689-3
-    body:
-      encoding: ASCII-8BIT
-      string: '{"documenttypes":[{"documenttypeid":391744,"name":"(OTHER): ORDER DELEGATION
-        PROTOCOL*"},{"documenttypeid":387756,"name":"(INPT_NURSING_REPEATING): CUSTOM
-        NURSING ORDER"},{"documenttypeid":348729,"name":"(LAB): ADDITIONAL ORDER CODES"},{"documenttypeid":394130,"name":"(OTHER):
-        DISCHARGE ORDER*"},{"documenttypeid":278029,"name":"(OTHER): DISCONTINUATION
-        ORDER*"},{"documenttypeid":522860,"name":"(OTHER): GROUP HOME ORDER*"},{"documenttypeid":285292,"name":"(OTHER):
-        HOME HEALTH ORDER*"},{"documenttypeid":265732,"name":"(OTHER): POST OPERATIVE
-        HOSPITAL ORDERS, ARM\/ELBOW SURGERY*"},{"documenttypeid":286505,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, COLON RESECTION*"},{"documenttypeid":265731,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, FOOT\/ANKLE SURGERY*"},{"documenttypeid":286506,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, HEMORRHOIDECTOMY\/RECTOCELE REPAIR*"},{"documenttypeid":265729,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, HIP SURGERY*"},{"documenttypeid":265730,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, LEG SURGERY*"},{"documenttypeid":265733,"name":"(OTHER):
-        POST OPERATIVE HOSPITAL ORDERS, SHOULDER SURGERY*"},{"documenttypeid":286507,"name":"(OTHER):
-        POST OPERATIVE OUTPATIENT ORDERS, HEMORRHOIDECTOMY*"},{"documenttypeid":348769,"name":"(OTHER):
-        PRE OPERATIVE ORDERS*"},{"documenttypeid":266041,"name":"(OTHER): PRE OPERATIVE
-        ORDERS, GYN SURGERY*"},{"documenttypeid":-401,"name":"(PATIENTINFO): Information
-        Order Test COC"},{"documenttypeid":-101,"name":"(PATIENTINFO): TEST EDUCATIONAL
-        INFO ORDER"},{"documenttypeid":486256,"name":"(PROCEDURE): SELECTIVE CATHETER
-        PLACEMENT, ARTERIAL SYSTEM, INITIAL THIRD ORDER OR MORE SELECTIVE ABDOMINAL,
-        PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (PROC)"},{"documenttypeid":501652,"name":"(PROCEDURE):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; EACH FIRST ORDER ABDOMINAL,
-        PELVIC, OR LOWER EXTREMITY ARTERY BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":499277,"name":"(PROCEDURE):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; EACH FIRST ORDER THORACIC OR
-        BRACHIOCEPHALIC BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":499753,"name":"(PROCEDURE):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; INITIAL SECOND ORDER THORACIC
-        OR BRACHIOCEPHALIC BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":501685,"name":"(PROCEDURE):
-        SELECTIVE CATHETER PLACEMENT, VENOUS, SECOND ORDER (PROC)"},{"documenttypeid":269821,"name":"(SURGERY):
-        ARTERIAL CATHETERIZATION, SELECTIVE, AORTIC APPROACH: ADDITIONAL PLACEMENT
-        - ABDOMINAL, INITIAL SECOND ORDER (SURG)"},{"documenttypeid":269823,"name":"(SURGERY):
-        ARTERIAL CATHETERIZATION, SELECTIVE, AORTIC APPROACH: ADDITIONAL PLACEMENT
-        - ABDOMINAL, INITIAL THIRD ORDER (SURG)"},{"documenttypeid":299138,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, ADDITIONAL SECOND ORDER, THIRD
-        ORDER, AND BEYOND, ABDOMINAL, PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299135,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, EACH FIRST ORDER ABDOMINAL,
-        PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299136,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, INITIAL SECOND ORDER ABDOMINAL,
-        PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299137,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, INITIAL THIRD ORDER OR MORE
-        SELECTIVE ABDOMINAL, PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":277541,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, VENOUS, FIRST ORDER (SURG)"},{"documenttypeid":277542,"name":"(SURGERY):
-        SELECTIVE CATHETER PLACEMENT, VENOUS, SECOND ORDER (SURG)"},{"documenttypeid":263961,"name":"(DME):
-        CPAP EQUIPMENT"},{"documenttypeid":323925,"name":"(OTHER): INSTRUCTIONS TO
-        ASSISTED LIVING HOME*"},{"documenttypeid":289099,"name":"(OTHER): ORTHOPEDIC
-        SURGERY*"},{"documenttypeid":399931,"name":"(OTHER): PERFORMANCE VIGILANCE
-        TEST*"},{"documenttypeid":391264,"name":"(PROCEDURE): OTHER (PROC)"},{"documenttypeid":501690,"name":"(PROCEDURE):
-        SLCTV CATH 1STORD W\/WO RENAL ARTERIAL PUNCT\/FLUOR\/S&I BILATERAL (PROC)"},{"documenttypeid":501692,"name":"(PROCEDURE):
-        SLCTV CATH 1STORD W\/WO RENAL ARTERIAL PUNCT\/FLUORO\/S&I UNILATERAL (PROC)"},{"documenttypeid":289297,"name":"(SURGERY):
-        ORTHOPAEDIC SURGERY - OTHER (SURG)"},{"documenttypeid":391263,"name":"(SURGERY):
-        OTHER (SURG)"}],"totalcount":41}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
-  recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
+  - request:
+      method: get
+      uri: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Authorization:
+          - Bearer test_access_token
+        Expect:
+          - ""
+    response:
+      status:
+        code: 401
+        message: Unauthorized
+      headers:
+        Date:
+          - Tue, 25 Feb 2025 14:30:17 GMT
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "202"
+        Connection:
+          - keep-alive
+        WWW-Authenticate:
+          - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
+            Invalid Access Token"'
+        X-Request-Id:
+          - rrt-2235720502923495187-b-gea1-236359-133207689-1
+      body:
+        encoding: ASCII-8BIT
+        string: |
+          {
+              "error": "Invalid Access Token.",
+              "detailedmessage": "The access token provided is not valid. Please verify the token is correct and provided as a bearer token in the authorization header."
+          }
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
+    recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
+  - request:
+      method: post
+      uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+      body:
+        encoding: US-ASCII
+        string: grant_type=client_credentials&scope=athena/service/Athenanet.MDP.*
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Expect:
+          - ""
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Tue, 25 Feb 2025 14:30:17 GMT
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "951"
+        Connection:
+          - keep-alive
+        Host:
+          - api.preview.platform.athenahealth.com
+        X-Forwarded-Port:
+          - "443"
+        X-Forwarded-Proto:
+          - https
+        Authorization:
+          - Basic MG9hdnJyNjQ2ZUVlUVVPYnMyOTc6cmgwOV9RbzdVMUptUjZiM0dncV9WX0hGNU5OT0QxRHhfaDdOVjRxTXMybmtXX2tmeGxYdkZQLWlnRG9GUVY2dA==
+        Accept:
+          - "*/*"
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        X-Forwarded-Host:
+          - api.preview.platform.athenahealth.com
+        Cache-Control:
+          - no-store
+        Pragma:
+          - no-cache
+        X-RateLimit-Limit:
+          - "5"
+        X-RateLimit-Remaining:
+          - "4"
+      body:
+        encoding: ASCII-8BIT
+        string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjNvMk9qbjQ3MUNhUjNCT1JlSUZBRFpVb244NHhwYmphVjNnSTdLMkx5eTgiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDkzODE3LCJleHAiOjE3NDA0OTc0MTcsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.afX6B2e4LUY3m9isrqtjXugt704UHVWC4Eem0EmQgHBV6-JRbUIHc0daDHj8qTjGhtM7cP4E3AYyhGP3Sw1wO93xgkVym0ZGIeGbVxJ7muv2T46ux_NwgRYOJPvwLQ3_P3XPVbdpGOixZI6VjCmyV-F7Y-8ZBDEF3NzHt0mOU7D86bs_YnvIULU4m8KItSrdTfnghHPdOh1BignNCsN5hCC9haXgf1pufi8_zGabRLK8S-9JAdhoNRCAAZc9NMqMrGknUNvisBfkPKejiNkUlVdXw2Mc9bRYB9Ht5Xd7GLKnzvGQk-yeMrXqyTie-8KAXQbE3E_R3I1cVepzqGKOZQ","scope":"athena/service/Athenanet.MDP.*"}'
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+    recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
+  - request:
+      method: get
+      uri: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Typhoeus - https://github.com/typhoeus/typhoeus
+        Authorization:
+          - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjNvMk9qbjQ3MUNhUjNCT1JlSUZBRFpVb244NHhwYmphVjNnSTdLMkx5eTgiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQwNDkzODE3LCJleHAiOjE3NDA0OTc0MTcsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.afX6B2e4LUY3m9isrqtjXugt704UHVWC4Eem0EmQgHBV6-JRbUIHc0daDHj8qTjGhtM7cP4E3AYyhGP3Sw1wO93xgkVym0ZGIeGbVxJ7muv2T46ux_NwgRYOJPvwLQ3_P3XPVbdpGOixZI6VjCmyV-F7Y-8ZBDEF3NzHt0mOU7D86bs_YnvIULU4m8KItSrdTfnghHPdOh1BignNCsN5hCC9haXgf1pufi8_zGabRLK8S-9JAdhoNRCAAZc9NMqMrGknUNvisBfkPKejiNkUlVdXw2Mc9bRYB9Ht5Xd7GLKnzvGQk-yeMrXqyTie-8KAXQbE3E_R3I1cVepzqGKOZQ
+        Expect:
+          - ""
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Tue, 25 Feb 2025 14:30:17 GMT
+        Content-Type:
+          - application/json; charset=UTF-8
+        Content-Length:
+          - "4413"
+        Connection:
+          - keep-alive
+        Server:
+          - Apache
+        Pragma:
+          - No-cache
+        Strict-Transport-Security:
+          - max-age=300
+        Expires:
+          - Sun, 06 Jan 2075 16:00:00 GMT
+        Cache-Control:
+          - no-cache, no-store
+        Vary:
+          - Accept-Encoding
+        Accept-CH:
+          - Sec-CH-UA-Platform-Version
+        nnCoection:
+          - close
+        X-RateLimit-Limit:
+          - "50000"
+        X-RateLimit-Remaining:
+          - "49813"
+        X-Request-Id:
+          - rrt-2235720502923495187-b-gea1-236359-133207689-3
+      body:
+        encoding: ASCII-8BIT
+        string: '{"documenttypes":[{"documenttypeid":391744,"name":"(OTHER): ORDER DELEGATION
+          PROTOCOL*"},{"documenttypeid":387756,"name":"(INPT_NURSING_REPEATING): CUSTOM
+          NURSING ORDER"},{"documenttypeid":348729,"name":"(LAB): ADDITIONAL ORDER CODES"},{"documenttypeid":394130,"name":"(OTHER):
+          DISCHARGE ORDER*"},{"documenttypeid":278029,"name":"(OTHER): DISCONTINUATION
+          ORDER*"},{"documenttypeid":522860,"name":"(OTHER): GROUP HOME ORDER*"},{"documenttypeid":285292,"name":"(OTHER):
+          HOME HEALTH ORDER*"},{"documenttypeid":265732,"name":"(OTHER): POST OPERATIVE
+          HOSPITAL ORDERS, ARM\/ELBOW SURGERY*"},{"documenttypeid":286505,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, COLON RESECTION*"},{"documenttypeid":265731,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, FOOT\/ANKLE SURGERY*"},{"documenttypeid":286506,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, HEMORRHOIDECTOMY\/RECTOCELE REPAIR*"},{"documenttypeid":265729,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, HIP SURGERY*"},{"documenttypeid":265730,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, LEG SURGERY*"},{"documenttypeid":265733,"name":"(OTHER):
+          POST OPERATIVE HOSPITAL ORDERS, SHOULDER SURGERY*"},{"documenttypeid":286507,"name":"(OTHER):
+          POST OPERATIVE OUTPATIENT ORDERS, HEMORRHOIDECTOMY*"},{"documenttypeid":348769,"name":"(OTHER):
+          PRE OPERATIVE ORDERS*"},{"documenttypeid":266041,"name":"(OTHER): PRE OPERATIVE
+          ORDERS, GYN SURGERY*"},{"documenttypeid":-401,"name":"(PATIENTINFO): Information
+          Order Test COC"},{"documenttypeid":-101,"name":"(PATIENTINFO): TEST EDUCATIONAL
+          INFO ORDER"},{"documenttypeid":486256,"name":"(PROCEDURE): SELECTIVE CATHETER
+          PLACEMENT, ARTERIAL SYSTEM, INITIAL THIRD ORDER OR MORE SELECTIVE ABDOMINAL,
+          PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (PROC)"},{"documenttypeid":501652,"name":"(PROCEDURE):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; EACH FIRST ORDER ABDOMINAL,
+          PELVIC, OR LOWER EXTREMITY ARTERY BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":499277,"name":"(PROCEDURE):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; EACH FIRST ORDER THORACIC OR
+          BRACHIOCEPHALIC BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":499753,"name":"(PROCEDURE):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM; INITIAL SECOND ORDER THORACIC
+          OR BRACHIOCEPHALIC BRANCH, WITHIN A VASCULAR FAMILY (PROC)"},{"documenttypeid":501685,"name":"(PROCEDURE):
+          SELECTIVE CATHETER PLACEMENT, VENOUS, SECOND ORDER (PROC)"},{"documenttypeid":269821,"name":"(SURGERY):
+          ARTERIAL CATHETERIZATION, SELECTIVE, AORTIC APPROACH: ADDITIONAL PLACEMENT
+          - ABDOMINAL, INITIAL SECOND ORDER (SURG)"},{"documenttypeid":269823,"name":"(SURGERY):
+          ARTERIAL CATHETERIZATION, SELECTIVE, AORTIC APPROACH: ADDITIONAL PLACEMENT
+          - ABDOMINAL, INITIAL THIRD ORDER (SURG)"},{"documenttypeid":299138,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, ADDITIONAL SECOND ORDER, THIRD
+          ORDER, AND BEYOND, ABDOMINAL, PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299135,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, EACH FIRST ORDER ABDOMINAL,
+          PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299136,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, INITIAL SECOND ORDER ABDOMINAL,
+          PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":299137,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, ARTERIAL SYSTEM, INITIAL THIRD ORDER OR MORE
+          SELECTIVE ABDOMINAL, PELVIC, OR LOWER EXTREMITY ARTERY BRANCH (SURG)"},{"documenttypeid":277541,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, VENOUS, FIRST ORDER (SURG)"},{"documenttypeid":277542,"name":"(SURGERY):
+          SELECTIVE CATHETER PLACEMENT, VENOUS, SECOND ORDER (SURG)"},{"documenttypeid":263961,"name":"(DME):
+          CPAP EQUIPMENT"},{"documenttypeid":323925,"name":"(OTHER): INSTRUCTIONS TO
+          ASSISTED LIVING HOME*"},{"documenttypeid":289099,"name":"(OTHER): ORTHOPEDIC
+          SURGERY*"},{"documenttypeid":399931,"name":"(OTHER): PERFORMANCE VIGILANCE
+          TEST*"},{"documenttypeid":391264,"name":"(PROCEDURE): OTHER (PROC)"},{"documenttypeid":501690,"name":"(PROCEDURE):
+          SLCTV CATH 1STORD W\/WO RENAL ARTERIAL PUNCT\/FLUOR\/S&I BILATERAL (PROC)"},{"documenttypeid":501692,"name":"(PROCEDURE):
+          SLCTV CATH 1STORD W\/WO RENAL ARTERIAL PUNCT\/FLUORO\/S&I UNILATERAL (PROC)"},{"documenttypeid":289297,"name":"(SURGERY):
+          ORTHOPAEDIC SURGERY - OTHER (SURG)"},{"documenttypeid":391263,"name":"(SURGERY):
+          OTHER (SURG)"}],"totalcount":41}'
+      http_version: "1.1"
+      adapter_metadata:
+        effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documenttypes?searchvalue=order
+    recorded_at: Tue, 25 Feb 2025 14:30:17 GMT
 recorded_with: VCR 3.0.3

@@ -68,8 +68,6 @@ http_interactions:
           - keep-alive
         Host:
           - api.preview.platform.athenahealth.com
-        X-Forwarded-For:
-          - 177.55.245.206
         X-Forwarded-Port:
           - "443"
         X-Forwarded-Proto:
