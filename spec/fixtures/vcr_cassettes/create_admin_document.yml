@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+    body:
+      encoding: US-ASCII
+      string: departmentid=200&documentsubclass=ADMIN&attachmentcontents=sample_doc.pdf=application/pdf=/home/loki/Projetos/bendhealth/athena_health/spec/fixtures/sample_doc.pdf
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Authorization:
+      - Bearer test_access_token
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Mon, 03 Mar 2025 18:12:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '202'
+      Connection:
+      - keep-alive
+      WWW-Authenticate:
+      - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
+        Invalid Access Token"'
+      X-Request-Id:
+      - rrt-4501785071229863699-b-gea1-2514213-95143234-1
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+            "error": "Invalid Access Token.",
+            "detailedmessage": "The access token provided is not valid. Please verify the token is correct and provided as a bearer token in the authorization header."
+        }
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+  recorded_at: Mon, 03 Mar 2025 18:12:33 GMT
+- request:
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&scope=athena/service/Athenanet.MDP.*
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 03 Mar 2025 18:12:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '951'
+      Connection:
+      - keep-alive
+      Host:
+      - api.preview.platform.athenahealth.com
+      X-Forwarded-For:
+      - 190.83.19.136
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      Authorization:
+      - Basic MG9hdnJyNjQ2ZUVlUVVPYnMyOTc6cmgwOV9RbzdVMUptUjZiM0dncV9WX0hGNU5OT0QxRHhfaDdOVjRxTXMybmtXX2tmeGxYdkZQLWlnRG9GUVY2dA==
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Forwarded-Host:
+      - api.preview.platform.athenahealth.com
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      X-RateLimit-Limit:
+      - '5'
+      X-RateLimit-Remaining:
+      - '4'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5GaWJQaEU0LUVGWVZZSGlFeTFwU0ZJNlZjWFJ1UTlIX2JkN1I3YjR4Rk0iLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NTUzLCJleHAiOjE3NDEwMjkxNTMsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.EKJK7TinX0HS1MDB-CjR1gBzG7p3jGS9N7veudnQrsJVAuXCJ4dXdQC3ydS5LG8TxBqXXWjx8gjwWMGtSW2FaWJWzDtJ5Xw67XlH50-IOwqRwcDFc0JMmDh7-GLtYZzjek4y0CcJ40YZtOUNpV4oK6o2mH38wphqZBWyBpowUxuZeBGW-1qX0yePnp2MSgn8dI0ImHMomVUgUp2XPfjVski1B23q1WwGSSMlk6b8JsZvd4hO3MMiOavlMJGn1JSjIa7x6nsE5FkTr_jV7EN4SxX3e3vslvQTosAC06VLU_mxzR2IHRzGqSBhV9L_DrXORlRV3kLz4c78Gv4qYXLI_w","scope":"athena/service/Athenanet.MDP.*"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+  recorded_at: Mon, 03 Mar 2025 18:12:33 GMT
+- request:
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+    body:
+      encoding: US-ASCII
+      string: departmentid=200&documentsubclass=ADMIN&attachmentcontents=sample_doc.pdf=application/pdf=/home/loki/Projetos/bendhealth/athena_health/spec/fixtures/sample_doc.pdf
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Authorization:
+      - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5GaWJQaEU0LUVGWVZZSGlFeTFwU0ZJNlZjWFJ1UTlIX2JkN1I3YjR4Rk0iLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NTUzLCJleHAiOjE3NDEwMjkxNTMsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.EKJK7TinX0HS1MDB-CjR1gBzG7p3jGS9N7veudnQrsJVAuXCJ4dXdQC3ydS5LG8TxBqXXWjx8gjwWMGtSW2FaWJWzDtJ5Xw67XlH50-IOwqRwcDFc0JMmDh7-GLtYZzjek4y0CcJ40YZtOUNpV4oK6o2mH38wphqZBWyBpowUxuZeBGW-1qX0yePnp2MSgn8dI0ImHMomVUgUp2XPfjVski1B23q1WwGSSMlk6b8JsZvd4hO3MMiOavlMJGn1JSjIa7x6nsE5FkTr_jV7EN4SxX3e3vslvQTosAC06VLU_mxzR2IHRzGqSBhV9L_DrXORlRV3kLz4c78Gv4qYXLI_w
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 03 Mar 2025 18:12:51 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache
+      Pragma:
+      - No-cache
+      Strict-Transport-Security:
+      - max-age=300
+      Expires:
+      - Sun, 06 Jan 2075 16:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store
+      Vary:
+      - Accept-Encoding
+      Accept-CH:
+      - Sec-CH-UA-Platform-Version
+      nnCoection:
+      - close
+      X-RateLimit-Limit:
+      - '50000'
+      X-RateLimit-Remaining:
+      - '49779'
+      X-Request-Id:
+      - rrt-4501785071229863699-b-gea1-2514213-95143234-3
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adminid":285394,"success":true}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+  recorded_at: Mon, 03 Mar 2025 18:12:51 GMT
+recorded_with: VCR 6.2.0
