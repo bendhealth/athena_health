@@ -957,4 +957,29 @@ describe AthenaHealth::Endpoints::Patients do
       end
     end
   end
+
+  describe '#create_patient_admin_document' do
+    subject do
+      client.create_patient_admin_document(
+        practice_id: practice_id,
+        department_id: department_id,
+        document_subclass: document_subclass,
+        patient_id: patient_id,
+        attachment_contents: attachment_contents
+      )
+    end
+
+    let(:patient_id) { 55 }
+    let(:practice_id) { 1_959_633 }
+    let(:department_id) { 200 }
+    let(:document_subclass) { 'BILLING' }
+    let(:attachment_contents) { File.open('spec/fixtures/sample_doc.pdf', 'rb') }
+
+    it 'returns Hash with adminid and success => true' do
+      VCR.use_cassette('create_patient_admin_document') do
+        expect(subject['success']).to eql(true)
+        expect(subject['adminid']).to eql(285_395)
+      end
+    end
+  end
 end

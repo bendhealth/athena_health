@@ -396,6 +396,18 @@ module AthenaHealth
           body: params
         )
       end
+
+      def create_patient_admin_document(practice_id:, department_id:, patient_id:, document_subclass:, attachment_contents:, params: {})
+        @api.call(
+          endpoint: "#{practice_id}/patients/#{patient_id}/documents/admin",
+          method: :post,
+          body: params.merge(
+            departmentid: department_id,
+            documentsubclass: document_subclass,
+            attachmentcontents: attachment_contents,
+          )
+        )
+      end
     end
   end
 end
