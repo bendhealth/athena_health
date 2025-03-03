@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin?departmentid=200&documentsubclass=ADMIN&startdate=2025-01-01&enddate=2025-03-03
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
     body:
       encoding: US-ASCII
-      string: ''
+      string: departmentid=200&documentsubclass=ADMIN&attachmentcontents=sample_doc.pdf=application/pdf=/home/loki/Projetos/bendhealth/athena_health/spec/fixtures/sample_doc.pdf
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
@@ -19,7 +19,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Mon, 03 Mar 2025 18:14:30 GMT
+      - Mon, 03 Mar 2025 18:12:33 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -30,7 +30,7 @@ http_interactions:
       - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
         Invalid Access Token"'
       X-Request-Id:
-      - rrt-4075814415290728091-c-gea1-859224-97081080-1
+      - rrt-4501785071229863699-b-gea1-2514213-95143234-1
     body:
       encoding: ASCII-8BIT
       string: |
@@ -40,8 +40,8 @@ http_interactions:
         }
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin?departmentid=200&documentsubclass=ADMIN&startdate=2025-01-01&enddate=2025-03-03
-  recorded_at: Mon, 03 Mar 2025 18:14:30 GMT
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+  recorded_at: Mon, 03 Mar 2025 18:12:33 GMT
 - request:
     method: post
     uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
@@ -59,7 +59,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Mar 2025 18:14:31 GMT
+      - Mon, 03 Mar 2025 18:12:33 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -92,22 +92,22 @@ http_interactions:
       - '4'
     body:
       encoding: ASCII-8BIT
-      string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULmNEb214V3VleUpCSGtkQmExdVZxTm5zQ2RIb1I2Qjh0eUgxeXNvcmZ1bWsiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NjcxLCJleHAiOjE3NDEwMjkyNzEsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.SnmD4SXUf2jt9230WfdaKxY9hl5WwEY05DDNeSUuxYcgnTYHajHdZO_Y46mHbxTdyIpzojBACkfRbo_1qdglhHF3DQ_L0Ys_rFF-pJxDQ7wRImhjJZfpgF-UfLjcDb98IohwbObVoDuAvqzrkcSTLVS8t8-NAfhRDY_9Evo1QGZtV9siKC7Zbe0E7Vn32CnoJTbhAsLg976SUAc5SrspNqIR5b7DCh5kiOgMnPX1VpSIqhj26UgmmiZV7crvJ8SoVG5DnJPDcSmBFke_VCQovVr-hWhSZDx5DNXBCO5qdt7E2tAaJ6Kpoq8oAhBNtPPQOhRg8e5c0Z5BEqY3IES_NA","scope":"athena/service/Athenanet.MDP.*"}'
+      string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5GaWJQaEU0LUVGWVZZSGlFeTFwU0ZJNlZjWFJ1UTlIX2JkN1I3YjR4Rk0iLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NTUzLCJleHAiOjE3NDEwMjkxNTMsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.EKJK7TinX0HS1MDB-CjR1gBzG7p3jGS9N7veudnQrsJVAuXCJ4dXdQC3ydS5LG8TxBqXXWjx8gjwWMGtSW2FaWJWzDtJ5Xw67XlH50-IOwqRwcDFc0JMmDh7-GLtYZzjek4y0CcJ40YZtOUNpV4oK6o2mH38wphqZBWyBpowUxuZeBGW-1qX0yePnp2MSgn8dI0ImHMomVUgUp2XPfjVski1B23q1WwGSSMlk6b8JsZvd4hO3MMiOavlMJGn1JSjIa7x6nsE5FkTr_jV7EN4SxX3e3vslvQTosAC06VLU_mxzR2IHRzGqSBhV9L_DrXORlRV3kLz4c78Gv4qYXLI_w","scope":"athena/service/Athenanet.MDP.*"}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
-  recorded_at: Mon, 03 Mar 2025 18:14:31 GMT
+  recorded_at: Mon, 03 Mar 2025 18:12:33 GMT
 - request:
-    method: get
-    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin?departmentid=200&documentsubclass=ADMIN&startdate=2025-01-01&enddate=2025-03-03
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
     body:
       encoding: US-ASCII
-      string: ''
+      string: departmentid=200&documentsubclass=ADMIN&attachmentcontents=sample_doc.pdf=application/pdf=/home/loki/Projetos/bendhealth/athena_health/spec/fixtures/sample_doc.pdf
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
       Authorization:
-      - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULmNEb214V3VleUpCSGtkQmExdVZxTm5zQ2RIb1I2Qjh0eUgxeXNvcmZ1bWsiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NjcxLCJleHAiOjE3NDEwMjkyNzEsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.SnmD4SXUf2jt9230WfdaKxY9hl5WwEY05DDNeSUuxYcgnTYHajHdZO_Y46mHbxTdyIpzojBACkfRbo_1qdglhHF3DQ_L0Ys_rFF-pJxDQ7wRImhjJZfpgF-UfLjcDb98IohwbObVoDuAvqzrkcSTLVS8t8-NAfhRDY_9Evo1QGZtV9siKC7Zbe0E7Vn32CnoJTbhAsLg976SUAc5SrspNqIR5b7DCh5kiOgMnPX1VpSIqhj26UgmmiZV7crvJ8SoVG5DnJPDcSmBFke_VCQovVr-hWhSZDx5DNXBCO5qdt7E2tAaJ6Kpoq8oAhBNtPPQOhRg8e5c0Z5BEqY3IES_NA
+      - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5GaWJQaEU0LUVGWVZZSGlFeTFwU0ZJNlZjWFJ1UTlIX2JkN1I3YjR4Rk0iLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQxMDI1NTUzLCJleHAiOjE3NDEwMjkxNTMsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.EKJK7TinX0HS1MDB-CjR1gBzG7p3jGS9N7veudnQrsJVAuXCJ4dXdQC3ydS5LG8TxBqXXWjx8gjwWMGtSW2FaWJWzDtJ5Xw67XlH50-IOwqRwcDFc0JMmDh7-GLtYZzjek4y0CcJ40YZtOUNpV4oK6o2mH38wphqZBWyBpowUxuZeBGW-1qX0yePnp2MSgn8dI0ImHMomVUgUp2XPfjVski1B23q1WwGSSMlk6b8JsZvd4hO3MMiOavlMJGn1JSjIa7x6nsE5FkTr_jV7EN4SxX3e3vslvQTosAC06VLU_mxzR2IHRzGqSBhV9L_DrXORlRV3kLz4c78Gv4qYXLI_w
       Expect:
       - ''
   response:
@@ -116,11 +116,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Mar 2025 18:14:31 GMT
+      - Mon, 03 Mar 2025 18:12:51 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '28'
+      - '33'
       Connection:
       - keep-alive
       Server:
@@ -142,14 +142,14 @@ http_interactions:
       X-RateLimit-Limit:
       - '50000'
       X-RateLimit-Remaining:
-      - '49778'
+      - '49779'
       X-Request-Id:
-      - rrt-4075814415290728091-c-gea1-859224-97081080-3
+      - rrt-4501785071229863699-b-gea1-2514213-95143234-3
     body:
       encoding: ASCII-8BIT
-      string: '{"admins":[],"totalcount":0}'
+      string: '{"adminid":285394,"success":true}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin?departmentid=200&documentsubclass=ADMIN&startdate=2025-01-01&enddate=2025-03-03
-  recorded_at: Mon, 03 Mar 2025 18:14:31 GMT
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/documents/admin
+  recorded_at: Mon, 03 Mar 2025 18:12:51 GMT
 recorded_with: VCR 6.2.0

@@ -29,6 +29,18 @@ module AthenaHealth
 
         AthenaHealth::DocumentCollection.new(documents: response['admins'])
       end
+
+      def create_admin_document( practice_id:, department_id:, document_subclass:, attachment_contents:, params: {})
+        @api.call(
+          endpoint: "#{practice_id}/documents/admin",
+          method: :post,
+          body: params.merge!(
+            departmentid: department_id,
+            documentsubclass: document_subclass,
+            attachmentcontents: attachment_contents
+          )
+        )
+      end
     end
   end
 end
