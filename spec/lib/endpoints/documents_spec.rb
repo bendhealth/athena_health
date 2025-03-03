@@ -21,7 +21,14 @@ describe AthenaHealth::Endpoints::CustomFields do
   end
 
   describe "admin_documents" do
-    subject { client.admin_documents( practice_id:, department_id:, document_subclass:, start_date:, end_date:) }
+    subject { client.admin_documents(
+        practice_id: practice_id,
+        department_id: department_id,
+        document_subclass: document_subclass,
+        start_date: start_date,
+        end_date: end_date
+      )
+    }
 
     let(:start_date) { '2025-01-01' }
     let(:end_date) { '2025-03-03' }
@@ -38,7 +45,13 @@ describe AthenaHealth::Endpoints::CustomFields do
   end
 
   describe "create_admin_document" do
-    subject { client.create_admin_document( practice_id:, department_id:, document_subclass:, attachment_contents:) }
+    subject { client.create_admin_document(
+        practice_id: practice_id,
+        department_id: department_id,
+        document_subclass: document_subclass,
+        attachment_contents: attachment_contents
+      )
+    }
 
     let(:document_subclass) { "ADMIN" }
     let(:attachment_contents) { File.open('spec/fixtures/sample_doc.pdf', 'rb') }
