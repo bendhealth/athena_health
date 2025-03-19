@@ -35,6 +35,7 @@ module AthenaHealth
     include Endpoints::CustomFields
     include Endpoints::Documents
     include Endpoints::SignedoffOrders
+    include Endpoints::Orders
 
     def self.base_url(production:)
       production ? PRODUCTION_BASE_URL : PREVIEW_BASE_URL

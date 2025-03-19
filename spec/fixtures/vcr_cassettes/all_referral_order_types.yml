@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/reference/order/referral?searchvalue=referral
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Authorization:
+      - Bearer test_access_token
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 19 Mar 2025 16:58:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '202'
+      Connection:
+      - keep-alive
+      WWW-Authenticate:
+      - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.invalid_access_token:
+        Invalid Access Token"'
+      X-Request-Id:
+      - rrt-6704980840258729418-b-gea1-65282-51566151-1
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+            "error": "Invalid Access Token.",
+            "detailedmessage": "The access token provided is not valid. Please verify the token is correct and provided as a bearer token in the authorization header."
+        }
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/reference/order/referral?searchvalue=referral
+  recorded_at: Wed, 19 Mar 2025 16:58:00 GMT
+- request:
+    method: post
+    uri: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&scope=athena/service/Athenanet.MDP.*
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Mar 2025 16:58:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '951'
+      Connection:
+      - keep-alive
+      Host:
+      - api.preview.platform.athenahealth.com
+      X-Forwarded-For:
+      - 177.55.245.206
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      Authorization:
+      - Basic MG9hdnJyNjQ2ZUVlUVVPYnMyOTc6cmgwOV9RbzdVMUptUjZiM0dncV9WX0hGNU5OT0QxRHhfaDdOVjRxTXMybmtXX2tmeGxYdkZQLWlnRG9GUVY2dA==
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Forwarded-Host:
+      - api.preview.platform.athenahealth.com
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      X-RateLimit-Limit:
+      - '5'
+      X-RateLimit-Remaining:
+      - '4'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"Bearer","expires_in":"3600","access_token":"eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULl9pU0xYanNvZFF4X2Q3aFRCSmdHWWZqeVo1aVVnMmM3amNOcDNfV2NCd0UiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQyNDAzNDgxLCJleHAiOjE3NDI0MDcwODEsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.KbKURrUse2blTYSeNc9zHyiD7ty8ZsWK1PxzD2S0O4QkWgsPkvC3vv4tjn5G-PunpxJTQUraEa2YUdnTuN6EOM2UtEbXZtBxuFutOWM30Z8Z1kwaikx6LuMzayk0Z0cSZIMv7LwVy0x6Vla5bp5ILfIY7Db_Q-b0A5UuWElsfI0sVd32FKVmyzt1TQQYuiZryzk_NUxknWD2HHGUvyOqWkYh-tFJ82OEpcHQrZl2BKl5rtBkkNLxt0--Cj1sjluzNUl4rKYuFmMqia8oZ5n-jDsT9ikmJmjhAZueb-qqbV2oZD5EoVqWVp6gDSFMTDlqCBsONfZHX6sQF8zgAnYrwg","scope":"athena/service/Athenanet.MDP.*"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/oauth2/v1/token
+  recorded_at: Wed, 19 Mar 2025 16:58:01 GMT
+- request:
+    method: get
+    uri: https://api.preview.platform.athenahealth.com/v1/1959633/reference/order/referral?searchvalue=referral
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Authorization:
+      - Bearer eyJraWQiOiJsU1BORDNsUU41eUhSaE1qc0FJZ2RsODJOVUhseUhWZUFuTVFSM1M0bXNBIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULl9pU0xYanNvZFF4X2Q3aFRCSmdHWWZqeVo1aVVnMmM3amNOcDNfV2NCd0UiLCJpc3MiOiJodHRwczovL2F0aGVuYS5va3RhLmNvbS9vYXV0aDIvYXVzMmhmZWk2b29rUHl5Q0EyOTciLCJhdWQiOiJzdXBwb3J0LXBoaS5hcGkuYXRoZW5haGVhbHRoLmlvIiwiaWF0IjoxNzQyNDAzNDgxLCJleHAiOjE3NDI0MDcwODEsImNpZCI6IjBvYXZycjY0NmVFZVFVT2JzMjk3Iiwic2NwIjpbImF0aGVuYS9zZXJ2aWNlL0F0aGVuYW5ldC5NRFAuKiJdLCJzdWIiOiIwb2F2cnI2NDZlRWVRVU9iczI5NyIsImFuZXRVc2VyIjoiIn0.KbKURrUse2blTYSeNc9zHyiD7ty8ZsWK1PxzD2S0O4QkWgsPkvC3vv4tjn5G-PunpxJTQUraEa2YUdnTuN6EOM2UtEbXZtBxuFutOWM30Z8Z1kwaikx6LuMzayk0Z0cSZIMv7LwVy0x6Vla5bp5ILfIY7Db_Q-b0A5UuWElsfI0sVd32FKVmyzt1TQQYuiZryzk_NUxknWD2HHGUvyOqWkYh-tFJ82OEpcHQrZl2BKl5rtBkkNLxt0--Cj1sjluzNUl4rKYuFmMqia8oZ5n-jDsT9ikmJmjhAZueb-qqbV2oZD5EoVqWVp6gDSFMTDlqCBsONfZHX6sQF8zgAnYrwg
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Mar 2025 16:58:06 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1161'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache
+      Pragma:
+      - No-cache
+      Strict-Transport-Security:
+      - max-age=300
+      Expires:
+      - Sun, 06 Jan 2075 16:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store
+      Vary:
+      - Accept-Encoding
+      Accept-CH:
+      - Sec-CH-UA-Platform-Version
+      Cneonction:
+      - close
+      X-RateLimit-Limit:
+      - '50000'
+      X-RateLimit-Remaining:
+      - '46713'
+      X-Request-Id:
+      - rrt-6704980840258729418-b-gea1-65282-51566151-3
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"ordertypeid":257362,"name":"cardiologist referral"},{"ordertypeid":276529,"name":"neuropsychologist
+        referral"},{"ordertypeid":269131,"name":"mental health counselor referral"},{"ordertypeid":260761,"name":"physical
+        therapist referral"},{"ordertypeid":257381,"name":"psychiatrist referral"},{"ordertypeid":257384,"name":"sleep
+        medicine referral"},{"ordertypeid":271129,"name":"dentist referral"},{"ordertypeid":269319,"name":"counseling
+        referral"},{"ordertypeid":257365,"name":"endocrinology, diabetes & metabolism
+        specialist referral"},{"ordertypeid":439730,"name":"substance use counselor
+        referral"},{"ordertypeid":257367,"name":"gastroenterologist referral"},{"ordertypeid":257378,"name":"orthopedic
+        surgeon referral"},{"ordertypeid":257363,"name":"dermatologist referral"},{"ordertypeid":257373,"name":"neurologist
+        referral"},{"ordertypeid":257387,"name":"urologist referral"},{"ordertypeid":257364,"name":"otolaryngologist
+        referral"},{"ordertypeid":257380,"name":"podiatrist referral"},{"ordertypeid":257831,"name":"gynecologist
+        referral"},{"ordertypeid":257786,"name":"pain management referral"},{"ordertypeid":257386,"name":"general
+        surgeon referral"}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.preview.platform.athenahealth.com/v1/1959633/reference/order/referral?searchvalue=referral
+  recorded_at: Wed, 19 Mar 2025 16:58:06 GMT
+recorded_with: VCR 3.0.3
