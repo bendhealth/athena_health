@@ -84,14 +84,14 @@ describe AthenaHealth::Endpoints::Patients do
 
       it 'returns Hash of errors' do
         VCR.use_cassette('create_patient_with_wrong_data') do
-          expect { client.create_patient(**attributes) }.to raise_error { |error|
+          expect { client.create_patient(**attributes) }.to(raise_error do |error|
             expect(error).to be_a(AthenaHealth::ValidationError)
             expect(error.details).to eq(
               'invalidfields' => [],
               'missingfields' => %w[lastname dob firstname],
               'error' => 'Additional fields are required.'
             )
-          }
+          end)
         end
       end
     end
@@ -111,12 +111,12 @@ describe AthenaHealth::Endpoints::Patients do
 
       it 'returns Hash with error information' do
         VCR.use_cassette('create_patient_with_wrong_formatted_data') do
-          expect { client.create_patient(**attributes) }.to raise_error { |error|
+          expect { client.create_patient(**attributes) }.to(raise_error do |error|
             expect(error).to be_a(AthenaHealth::ValidationError)
             expect(error.details).to eq(
               'error' => 'Improper DOB.'
             )
-          }
+          end)
         end
       end
     end
@@ -170,13 +170,13 @@ describe AthenaHealth::Endpoints::Patients do
 
       it 'returns Hash with error information' do
         VCR.use_cassette('create_patient_problem_with_missing_data') do
-          expect { client.create_patient_problem(**attributes) }.to raise_error { |error|
+          expect { client.create_patient_problem(**attributes) }.to(raise_error do |error|
             expect(error).to be_a(AthenaHealth::ValidationError)
             expect(error.details).to eq(
               'detailedmessage' => 'Expecting type integer, but value is ',
               'error' => 'The data provided is invalid.'
             )
-          }
+          end)
         end
       end
     end
@@ -390,6 +390,27 @@ describe AthenaHealth::Endpoints::Patients do
       VCR.use_cassette('create_patient_document') do
         expect(client.create_patient_document(**attributes))
           .to eq 'documentid' => '117707'
+      end
+    end
+  end
+
+  describe '#create_patient_clinical_document' do
+    let(:attributes) do
+      {
+        practice_id: 1_959_633,
+        department_id: 1,
+        patient_id: 1,
+        params: {
+          documentsubclass: 'MENTALHEALTH',
+          attachmentcontents: File.open('spec/fixtures/sample_doc.pdf', 'rb')
+        }
+      }
+    end
+
+    it 'returns documentid' do
+      VCR.use_cassette('create_patient_clinical_document') do
+        expect(client.create_patient_clinical_document(**attributes))
+          .to eq({ 'clinicaldocumentid' => 285_634, 'success' => true })
       end
     end
   end
@@ -923,13 +944,13 @@ describe AthenaHealth::Endpoints::Patients do
 
       it 'returns Hash with error information' do
         VCR.use_cassette('create_patient_case_wrong_source') do
-          expect { client.create_patient_case(**attributes) }.to raise_error { |error|
+          expect { client.create_patient_case(**attributes) }.to(raise_error do |error|
             expect(error).to be_a(AthenaHealth::ValidationError)
             expect(error.details).to eq(
               'detailedmessage' => "The value 'patient' did not match any of the enum values for SOURCE",
               'error' => 'The data provided is invalid.'
             )
-          }
+          end)
         end
       end
     end
