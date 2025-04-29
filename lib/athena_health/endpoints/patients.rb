@@ -160,9 +160,9 @@ module AthenaHealth
         DocumentCollection.new(response)
       end
 
-      def create_patient_document(practice_id:, department_id:, patient_id:, doctype:, params: {})
+      def create_patient_document(practice_id:, department_id:, patient_id:, params: {})
         @api.call(
-          endpoint: "#{practice_id}/patients/#{patient_id}/documents/#{doctype}",
+          endpoint: "#{practice_id}/patients/#{patient_id}/documents",
           method: :post,
           body: params.merge!(departmentid: department_id.to_s)
         )
